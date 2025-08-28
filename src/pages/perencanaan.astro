@@ -1,0 +1,84 @@
+---
+// --- AWAL DARI AREA FRONTMATTER (KODE JAVASCRIPT SISI SERVER) ---
+
+// Mengimpor file CSS global untuk styling dasar halaman.
+import '../styles/global.css';
+// Mengimpor fungsi 'getCollection' dari Astro untuk mengambil data dari folder 'content'.
+import { getCollection } from 'astro:content';
+
+// Memanggil fungsi 'getCollection' untuk membaca semua file dari koleksi 'rencana'.
+// Astro akan mencari file di folder 'src/content/rencana'.
+// Jika folder tersebut kosong, 'semuaRencana' akan menjadi array kosong [].
+const semuaRencana = await getCollection('rencana');
+---
+  
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/GraniteShell_trasparent.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Rencana - GraniteShell</title>
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <div class="container mx-auto px-4 py-12">
+      
+      <div class="mb-12">
+        <a href="/" class="text-blue-400 hover:text-blue-300 transition-colors">
+          &larr; Kembali ke Halaman Utama
+        </a>
+      </div>
+
+      <h1 class="text-5xl font-bold mb-4">Rencana Pengembangan</h1>
+      <p class="text-lg text-gray-400 mb-12">
+        Berikut adalah beberapa fitur dan perbaikan besar yang kami rencanakan untuk masa depan GraniteShell.
+      </p>
+
+      {/* Ini adalah blok kondisional Astro. Ia memeriksa apakah ada item di dalam 'semuaRencana'. */}
+      {semuaRencana.length > 0 ? (
+        // JIKA 'semuaRencana' TIDAK KOSONG (ada file rencana), maka tampilkan blok ini.
+        <div class="space-y-8">
+          {/* Melakukan iterasi (looping) pada setiap item di dalam array 'semuaRencana'. */}
+          {semuaRencana.map(rencana => (
+            // Setiap item rencana akan ditampilkan dalam sebuah kartu (card).
+            <div class="bg-gray-800 p-6 rounded-lg">
+              <div class="flex items-center mb-2">
+                {/* Menampilkan judul rencana dari data frontmatter file Markdown. */}
+                <h2 class="text-2xl font-bold">{rencana.data.title}</h2>
+                {/* Badge untuk menampilkan status rencana. */}
+                {/* 'class:list' adalah fitur Astro untuk menerapkan kelas CSS secara kondisional. */}
+                <span class:list={[
+                  "text-xs font-semibold px-2 py-1 rounded-full ml-4", // Kelas dasar untuk semua badge.
+                  // Kelas di bawah ini hanya akan diterapkan jika kondisinya terpenuhi.
+                  { "bg-green-500/20 text-green-300": rencana.data.status === 'Tersedia' },
+                  { "bg-blue-500/20 text-blue-300": rencana.data.status === 'Beta' },
+                  { "bg-yellow-500/20 text-yellow-300": rencana.data.status === 'Rencana' },
+                  { "bg-purple-500/20 text-purple-300": rencana.data.status === 'Visi ke Depan' }
+                ]}>
+                  {/* Menampilkan status rencana dari data frontmatter. */}
+                  {rencana.data.status}
+                </span>
+              </div>
+              {/* Bagian untuk menampilkan konten utama dari file Markdown. */}
+              <div class="prose prose-invert max-w-none text-gray-400">
+                {/* Komponen <rencana.Content /> akan me-render isi dari file .md menjadi HTML. */}
+                <rencana.Content />
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        // JIKA 'semuaRencana' KOSONG, maka tampilkan blok "kondisi kosong" (empty state) ini.
+        <div class="mt-20 bg-gray-800 border-2 border-dashed border-gray-700 p-12 rounded-lg text-center flex flex-col items-center">
+          {/* Ikon jam sebagai visual. */}
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-gray-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <h2 class="text-2xl font-bold">Rencana Segera Hadir</h2>
+          <p class="text-gray-400 mt-2 max-w-md">
+            Tim kami sedang bekerja keras menyusun roadmap pengembangan GraniteShell. Pantau terus halaman ini untuk pembaruan selanjutnya!
+          </p>
+        </div>
+      )}
+      </div>
+  </body>
+</html>
