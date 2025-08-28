@@ -6,7 +6,7 @@
 
 Selamat datang di repository resmi untuk kode sumber website GraniteShell. Website ini berfungsi sebagai halaman perkenalan (*landing page*), pusat informasi, dan tempat untuk mengunduh rilis terbaru dari aplikasi [GraniteShell Terminal](https://github.com/Oenm176/GraniteShell).
 
-**[➡️ Lihat Website Live]([https://nama-proyek-anda.web.app](https://graniteshell.netlify.app/))** 
+**[➡️ Lihat Website Live](https://nama-proyek-anda.web.app](https://graniteshell.netlify.app/)** 
 
 ---
 
