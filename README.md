@@ -1,60 +1,59 @@
-seb# Astro Starter Kit: Basics
+# Website Resmi GraniteShell
 
-```sh
-npm create astro@latest -- --template basics
-```
+<p align="center">
+  <img src="https://github.com/Oenm176/GraniteShell-site/blob/main/public/image_01eaf9.png?raw=true" alt="Tampilan Website GraniteShell">
+</p>
 
-<!-- ASTRO:REMOVE:START -->
+Selamat datang di repository resmi untuk kode sumber website GraniteShell. Website ini berfungsi sebagai halaman perkenalan (*landing page*), pusat informasi, dan tempat untuk mengunduh rilis terbaru dari aplikasi [GraniteShell Terminal](https://github.com/Oenm176/GraniteShell).
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+**[➡️ Lihat Website Live](https://nama-proyek-anda.web.app)** *(Ganti dengan URL Firebase Anda jika sudah deploy)*
 
-<!-- ASTRO:REMOVE:END -->
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Teknologi yang Digunakan
 
-<!-- ASTRO:REMOVE:START -->
+Website ini dibangun menggunakan tumpukan teknologi modern yang berfokus pada kecepatan dan pengalaman developer:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+* **Framework:** [**Astro**](https://astro.build/) - Untuk membangun website yang super cepat.
+* **Styling:** [**Tailwind CSS**](https://tailwindcss.com/) - Untuk desain antarmuka yang modern dan responsif.
+* **Deployment:** [**Firebase Hosting**](https://firebase.google.com/docs/hosting) - Untuk hosting yang cepat, aman, dan terukur.
+* **Content:** [**Astro Content Collections**](https://docs.astro.build/en/guides/content-collections/) - Untuk mengelola konten seperti halaman Rencana (Roadmap).
 
-<!-- ASTRO:REMOVE:END -->
+---
 
-## 🚀 Project Structure
+## 🛠️ Menjalankan Proyek Secara Lokal
 
-Inside of your Astro project, you'll see the following folders and files:
+Jika Anda ingin menjalankan website ini di komputer Anda sendiri, ikuti langkah-langkah berikut:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+1.  **Clone repository ini:**
+    ```bash
+    git clone [https://github.com/Oenm176/GraniteShell-site.git](https://github.com/Oenm176/GraniteShell-site.git)
+    ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+2.  **Masuk ke direktori proyek:**
+    ```bash
+    cd GraniteShell-site
+    ```
 
-## 🧞 Commands
+3.  **Install semua dependensi:**
+    ```bash
+    npm install
+    ```
 
-All commands are run from the root of the project, from a terminal:
+4.  **Jalankan server development:**
+    ```bash
+    npm run dev
+    ```
+    Website akan berjalan secara lokal di `http://localhost:4321`.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+## ❤️ Kontribusi
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Kami sangat terbuka untuk kontribusi dalam bentuk apa pun untuk meningkatkan website ini. Jika Anda menemukan kesalahan ketik, bug, atau punya ide untuk perbaikan, silakan buat **[Issue](https://github.com/Oenm176/GraniteShell-site/issues)** atau **[Pull Request](https://github.com/Oenm176/GraniteShell-site/pulls)**.
+
+---
+
+## 📄 Lisensi
+
+Kode sumber website ini dirilis di bawah **Lisensi MIT**.
