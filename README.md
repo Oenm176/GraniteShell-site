@@ -1,7 +1,7 @@
 # Website Resmi GraniteShell
 
 <p align="center">
-  <img src="https://github.com/Oenm176/GraniteShell-site/blob/main/public/image_01eaf9.png?raw=true" alt="Tampilan Website GraniteShell">
+  <img src="public/preview_graniteshell.webp" alt="Tampilan Website GraniteShell">
 </p>
 
 Selamat datang di repository resmi untuk kode sumber website GraniteShell. Website ini berfungsi sebagai halaman perkenalan (*landing page*), pusat informasi, dan tempat untuk mengunduh rilis terbaru dari aplikasi [GraniteShell Terminal](https://github.com/Oenm176/GraniteShell).
