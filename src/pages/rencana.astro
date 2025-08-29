@@ -5,6 +5,7 @@
 import '../styles/global.css';
 // Mengimpor fungsi 'getCollection' dari Astro untuk mengambil data dari folder 'content'.
 import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 
 // Memanggil fungsi 'getCollection' untuk membaca semua file dari koleksi 'rencana'.
 // Astro akan mencari file di folder 'src/content/rencana'.
@@ -38,7 +39,7 @@ const semuaRencana = await getCollection('rencana');
         // JIKA 'semuaRencana' TIDAK KOSONG (ada file rencana), maka tampilkan blok ini.
         <div class="space-y-8">
           {/* Melakukan iterasi (looping) pada setiap item di dalam array 'semuaRencana'. */}
-          {semuaRencana.map(rencana => (
+          {semuaRencana.map((rencana: CollectionEntry<'rencana'>) => (
             // Setiap item rencana akan ditampilkan dalam sebuah kartu (card).
             <div class="bg-gray-800 p-6 rounded-lg">
               <div class="flex items-center mb-2">
