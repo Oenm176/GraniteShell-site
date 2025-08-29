@@ -1,13 +1,13 @@
-// src/content/config.ts
+// src/content/config.ts (Versi Sederhana)
 import { defineCollection, z } from 'astro:content';
 
 const rencanaCollection = defineCollection({
   schema: z.object({
     title: z.string(),
-    status: z.enum(['Tersedia', 'Beta', 'Rencana', 'Visi ke Depan']),
+    status: z.string(), 
   }),
 });
 
 export const collections = {
-  rencana: rencanaCollection,
+  'rencana': rencanaCollection,
 };

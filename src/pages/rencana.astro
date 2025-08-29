@@ -47,14 +47,9 @@ const semuaRencana = await getCollection('rencana');
                 <h2 class="text-2xl font-bold">{rencana.data.title}</h2>
                 {/* Badge untuk menampilkan status rencana. */}
                 {/* 'class:list' adalah fitur Astro untuk menerapkan kelas CSS secara kondisional. */}
-                <span class:list={[
-                  "text-xs font-semibold px-2 py-1 rounded-full ml-4", // Kelas dasar untuk semua badge.
-                  // Kelas di bawah ini hanya akan diterapkan jika kondisinya terpenuhi.
-                  { "bg-green-500/20 text-green-300": rencana.data.status === 'Tersedia' },
-                  { "bg-blue-500/20 text-blue-300": rencana.data.status === 'Beta' },
-                  { "bg-yellow-500/20 text-yellow-300": rencana.data.status === 'Rencana' },
-                  { "bg-purple-500/20 text-purple-300": rencana.data.status === 'Visi ke Depan' }
-                ]}>
+                <span class="text-xs font-semibold px-2 py-1 rounded-full ml-4 bg-gray-600">
+                  {rencana.data.status}
+                </span>
                   {/* Menampilkan status rencana dari data frontmatter. */}
                   {rencana.data.status}
                 </span>
