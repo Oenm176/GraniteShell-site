@@ -1,9 +1,4 @@
 ---
-title: Mengaktifkan Fungsi /update
-status: Rencana
----
-
----
 title: Manajemen Versi Internal (`/update` & `/downgrade`)
 status: Rencana
 ---
