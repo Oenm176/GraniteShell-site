@@ -1,6 +1,6 @@
 ---
 title: Manajemen Versi Internal (`/update` & `/downgrade`)
-status: Rencana
+status: 'Rencana'
 ---
 
 Menjaga GraniteShell agar selalu berada di versi yang Anda butuhkan akan menjadi lebih mudah dari sebelumnya, langsung dari dalam terminal. Kami sedang merancang sistem manajemen versi yang kuat untuk memberi Anda kontrol penuh atas aplikasi Anda.
